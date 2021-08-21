@@ -27,20 +27,24 @@
             <!--Forward and Backward Button-->
             <StackPanel Orientation="Horizontal" Margin="10,0">
                 <Button x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
-                        Click="backBtn_Click">
+                        Click="backBtn_Click"
+                        BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72b;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
 
                 </Button>
                 <Button x:Name="forwardBtn"  Background="{x:Null}"
-                        Click="forwardBtn_Click">
+                        Click="forwardBtn_Click"
+                        BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72a;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
                 <Button x:Name="refreshBtn"  Background="{x:Null}"
-                        Click="forwardBtn_Click">
+                        Click="forwardBtn_Click"
+                        BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72c;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
                 <Button x:Name="homeBtn"  Background="{x:Null}"
-                        Click="forwardBtn_Click">
+                        Click="homeBtn_Click"
+                        BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe80f;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
             </StackPanel>
@@ -57,11 +61,16 @@
             <!--Setting Flyout-->
             <Button Grid.Column="2"
                     HorizontalAlignment="Right"
-                    Margin="10,0" Background="{x:Null}" Foreground="{StaticResource wbForegroundColor}">
+                    Margin="10,0" Background="{x:Null}" Foreground="{StaticResource wbForegroundColor}"
+                    BorderThickness="0">
                 <!--Settings button Flyout-->
                 <Button.Flyout>
                     <MenuFlyout>
-                        <MenuFlyoutItem Text="Settings"></MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Settings" x:Name="settingBtn" Click="settingBtn_Click">
+                            <MenuFlyoutItem.Icon>
+                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe713;"></FontIcon>
+                            </MenuFlyoutItem.Icon>
+                        </MenuFlyoutItem>
                     </MenuFlyout>
                 </Button.Flyout>
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"></FontIcon>

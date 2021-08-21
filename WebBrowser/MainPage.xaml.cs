@@ -59,5 +59,15 @@ namespace WebBrowser
         {
             webBrowser.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
         }
+
+        private void homeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            webBrowser.Refresh();
+        }
+
+        private void settingBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SettingPage));
+        }
     }
 }

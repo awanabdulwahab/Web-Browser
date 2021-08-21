@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-21T11:30:58.075</Modified>
+      <Modified>2021-08-21T12:10:32.354</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\WebBrowser.exe">
       <PackagePath>entrypoint\WebBrowser.exe</PackagePath>
-      <Modified>2021-08-21T11:30:57.118</Modified>
+      <Modified>2021-08-21T12:10:31.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -104,19 +104,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\WebBrowser.xr.xml">
       <PackagePath>WebBrowser.xr.xml</PackagePath>
-      <Modified>2021-08-21T11:12:51.040</Modified>
+      <Modified>2021-08-21T12:10:31.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-08-21T11:30:56.975</Modified>
+      <Modified>2021-08-21T12:10:31.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-08-21T11:30:56.975</Modified>
+      <Modified>2021-08-21T12:10:31.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\SettingPage.xbf">
       <PackagePath>SettingPage.xbf</PackagePath>
-      <Modified>2021-08-21T11:30:56.975</Modified>
+      <Modified>2021-08-21T12:10:31.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -128,7 +128,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\Core\WebBrowser.exe">
       <PackagePath>WebBrowser.exe</PackagePath>
-      <Modified>2021-08-21T11:30:58.067</Modified>
+      <Modified>2021-08-21T12:10:32.341</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

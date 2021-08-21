@@ -26,21 +26,25 @@
             
             <!--Forward and Backward Button-->
             <StackPanel Orientation="Horizontal" Margin="10,0">
-                <Button x:ConnectionId='6' x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
-                                             >
+                <Button x:ConnectionId='7' x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
+                                             
+                        BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72b;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
 
                 </Button>
-                <Button x:ConnectionId='7' x:Name="forwardBtn"  Background="{x:Null}"
-                                                >
+                <Button x:ConnectionId='8' x:Name="forwardBtn"  Background="{x:Null}"
+                                                
+                        BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72a;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
-                <Button x:ConnectionId='8' x:Name="refreshBtn"  Background="{x:Null}"
-                                                >
+                <Button x:ConnectionId='9' x:Name="refreshBtn"  Background="{x:Null}"
+                                                
+                        BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72c;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
-                <Button x:ConnectionId='9' x:Name="homeBtn"  Background="{x:Null}"
-                                                >
+                <Button x:ConnectionId='10' x:Name="homeBtn"  Background="{x:Null}"
+                                             
+                        BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe80f;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
             </StackPanel>
@@ -57,11 +61,16 @@
             <!--Setting Flyout-->
             <Button Grid.Column="2"
                     HorizontalAlignment="Right"
-                    Margin="10,0" Background="{x:Null}" Foreground="{StaticResource wbForegroundColor}">
+                    Margin="10,0" Background="{x:Null}" Foreground="{StaticResource wbForegroundColor}"
+                    BorderThickness="0">
                 <!--Settings button Flyout-->
                 <Button.Flyout>
                     <MenuFlyout>
-                        <MenuFlyoutItem Text="Settings"></MenuFlyoutItem>
+                        <MenuFlyoutItem x:ConnectionId='6' Text="Settings" x:Name="settingBtn"                         >
+                            <MenuFlyoutItem.Icon>
+                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe713;"></FontIcon>
+                            </MenuFlyoutItem.Icon>
+                        </MenuFlyoutItem>
                     </MenuFlyout>
                 </Button.Flyout>
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"></FontIcon>
