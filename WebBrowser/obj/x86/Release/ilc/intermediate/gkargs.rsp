@@ -1,0 +1,7 @@
+﻿"D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Release\ilc\in\WebBrowser.exe"
+/Lib:"D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Release\ilc\in"
+/Lib:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.compiler\2.2.10-rel-29722-00\tools\x86\ilc\lib\Private"
+/WinMD:"D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Release\ilc\in\WinMetadata\Windows.winmd"
+/VSTelemetrySessionSettings:"{\"IsOptedIn\":true,\"HostName\":\"Dev14\",\"AppInsightsInstrumentationKey\":\"f144292e-e3b2-4011-ac90-20e5c03fbce5\",\"AsimovInstrumentationKey\":\"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70\",\"AppId\":1001,\"UserId\":\"1d3f8a70-33b5-46d0-804f-668d17a2c504\",\"Id\":\"4b2e4895-ccec-47ac-bdf5-d7ed8e844b38\",\"ProcessStartTime\":637651312832230435}"
+/RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\2.2.10-rel-29722-00\tools\LibraryXML"
+/RunOnlyPreDR

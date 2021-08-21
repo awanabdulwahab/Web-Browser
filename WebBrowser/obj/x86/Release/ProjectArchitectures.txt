@@ -1,0 +1,1 @@
+D:\C#\UWP Projects\WebBrowser\WebBrowser\WebBrowser.csproj;x86

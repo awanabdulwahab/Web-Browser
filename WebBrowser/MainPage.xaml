@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="WebBrowser.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WebBrowser"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{StaticResource wbBackgroundColor}">
+        <!--Base Grid-->
+    <Grid x:Name="BaseGrid">
+        <Grid.RowDefinitions>
+            <!--Title Bar Row Definition-->
+            <RowDefinition Height="25"></RowDefinition> 
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!--Title Bar Grid-->
+        <Grid x:Name="TitleBarGrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition> <!--Navigation Button Column Definition-->
+                <ColumnDefinition Width="2*"></ColumnDefinition> <!--Search Bar Column Definition-->
+                <ColumnDefinition></ColumnDefinition> <!--setting Column Definition-->
+            </Grid.ColumnDefinitions>
+            
+            <!--Forward and Backward Button-->
+            <StackPanel Orientation="Horizontal" Margin="10,0">
+                <Button x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
+                        Click="backBtn_Click">
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72b;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
+
+                </Button>
+                <Button x:Name="forwardBtn"  Background="{x:Null}"
+                        Click="forwardBtn_Click">
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72a;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
+                </Button>
+                <Button x:Name="refreshBtn"  Background="{x:Null}"
+                        Click="forwardBtn_Click">
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72c;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
+                </Button>
+                <Button x:Name="homeBtn"  Background="{x:Null}"
+                        Click="forwardBtn_Click">
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe80f;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
+                </Button>
+            </StackPanel>
+            
+            <!--Search Bar-->
+            <TextBox x:Name="txt_searchBar" 
+                     Grid.Column="1"
+                     TextWrapping="NoWrap"
+                     PlaceholderText="Search...."
+                     Height="25"
+                     VerticalContentAlignment="Center"
+                     BorderThickness="0" KeyDown="txt_searchBar_KeyDown"></TextBox>
+            
+            <!--Setting Flyout-->
+            <Button Grid.Column="2"
+                    HorizontalAlignment="Right"
+                    Margin="10,0" Background="{x:Null}" Foreground="{StaticResource wbForegroundColor}">
+                <!--Settings button Flyout-->
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="Settings"></MenuFlyoutItem>
+                    </MenuFlyout>
+                </Button.Flyout>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"></FontIcon>
+            </Button>
+        </Grid>
+        
+        <!--Web View-->
+        <WebView Grid.Row="2"
+                 Source="http://www.google.co.uk"
+                 x:Name="webBrowser"></WebView>
+    </Grid>
+</Page>
