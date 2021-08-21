@@ -25,8 +25,8 @@ namespace WebBrowser
         public MainPage()
         {
             this.InitializeComponent();
-            //DataAccess data = new DataAccess();
-            //data.CreateSettingsFile();
+            DataAccess data = new DataAccess();
+            data.CreateSettingsFile();
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -86,6 +86,12 @@ namespace WebBrowser
             webBrowserProgressBar.IsIndeterminate = false;
             statusBar.Text = webBrowser.Source.AbsoluteUri;
             TitleBarLabel.Text = "Awan Brother" +" | "+ webBrowser.DocumentTitle;
+
+            DataTransfer dataTransfer = new DataTransfer();
+            if (!string.IsNullOrEmpty(txt_searchBar.Text))
+            {
+                dataTransfer.SaveSearchTerm(txt_searchBar.Text, webBrowser.DocumentTitle, webBrowser.Source.AbsoluteUri); 
+            }
 
         }
 

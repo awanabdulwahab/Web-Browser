@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="WebBrowser.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WebBrowser"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{StaticResource wbBackgroundColor}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!--Navigation View-->
+        <Pivot x:ConnectionId='2' x:Name="settingsPivotView"
+               Grid.Row="1"
+               Title="Settings">
+
+            <PivotItem Header="Bookmarks"></PivotItem>
+            <PivotItem Header="History">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid x:ConnectionId='3' x:Name="HistoryListGrid" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="32"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        
+                        <!--Title-->
+                        <TextBlock Text="Your History"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0" 
+                                   Foreground="{StaticResource wbDarkTextColor}"></TextBlock>
+
+                        <ListBox x:ConnectionId='4' x:Name="HistoryListBox"
+                                 Grid.Row="1" 
+                                 Background="{x:Null}">
+                            <ListBoxItem Style="{StaticResource HistoryListBoxItem}" Content="Google.com" Background="{StaticResource wbListBoxBackgorund}" Foreground="{StaticResource wbListBoxForeground}" ></ListBoxItem>
+                        </ListBox>
+                    </Grid>
+                    
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Search Engine"></PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
+

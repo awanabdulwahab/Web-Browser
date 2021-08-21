@@ -49,9 +49,9 @@ namespace WebBrowser
 
                 await Windows.System.Launcher.LaunchFileAsync(storageFile);
             }
-            catch (Exception ex)
+            catch
             {
-                throw;
+                
             }
         }
     }

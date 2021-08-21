@@ -43,8 +43,8 @@ D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\qualifiers.txt.intermedia
 D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\ProjectArchitectures.txt
 D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424635200000000.json
-D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\SettingPage.xbf
-D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingPage.g.i.cs
-D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingPage.g.cs
-D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingPage.xaml
-D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingPage.xbf
+D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\SettingsPage.xbf
+D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingsPage.g.i.cs
+D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingsPage.g.cs
+D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingsPage.xaml
+D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingsPage.xbf

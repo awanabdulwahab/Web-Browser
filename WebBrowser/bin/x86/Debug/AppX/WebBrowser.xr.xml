@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="ImageSource" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="Resources" />
@@ -7,20 +10,101 @@
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
+      <RootProperty Name="Style" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="Background" />
+      <RootProperty Name="TabNavigation" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="UseSystemFocusVisuals" />
+      <RootProperty Name="Template" />
+      <RootMethod Name="GetIsTemplateFocusTarget" />
+      <RootMethod Name="SetIsTemplateFocusTarget" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ControlTemplate">
+      <RootProperty Name="TargetType" />
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Resources" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="RowDefinitions" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualStateManager">
+      <RootMethod Name="GetVisualStateGroups" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.TemplateBindingExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentPresenter">
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="LineStackingStrategy" />
+      <RootProperty Name="TextLineBounds" />
+      <RootProperty Name="OpticalMarginAlignment" />
+      <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="ContentTransitions" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.VisualStateGroup">
+      <RootProperty Name="States" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualState">
+      <RootProperty Name="Storyboard" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.Storyboard">
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetTargetName" />
+      <RootMethod Name="SetTargetName" />
+      <RootMethod Name="GetTargetProperty" />
+      <RootMethod Name="SetTargetProperty" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames">
+      <RootProperty Name="KeyFrames" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame">
+      <RootProperty Name="KeyTime" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Fill" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootEvent Name="Loading" />
-    </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="RowDefinitions" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="ColumnDefinitions" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -45,9 +129,6 @@
       <RootEvent Name="NavigationStarting" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
@@ -85,9 +166,17 @@
       <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="WebBrowser.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Title" />
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />
-      <RootProperty Name="PaneDisplayMode" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="WebBrowser.SettingPage" />
   </Roots.RootTypes>
