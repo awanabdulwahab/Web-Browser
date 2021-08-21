@@ -18,7 +18,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Text="Awan Browsers" VerticalAlignment="Center" Margin="10,0" Foreground="{StaticResource wbDarkTextColor}" ></TextBlock>
+        <TextBlock x:Name="TitleBarLabel" Text="Awan Browsers" VerticalAlignment="Center" Margin="10,0" Foreground="{StaticResource wbDarkTextColor}" ></TextBlock>
         <!--Title Bar Grid-->
         <Grid x:Name="TitleBarGrid" Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -83,7 +83,9 @@
         <!--Web View-->
         <WebView Grid.Row="2"
                  Source="http://www.google.co.uk"
-                 x:Name="webBrowser"></WebView>
+                 x:Name="webBrowser" 
+                 NavigationCompleted="webBrowser_NavigationCompleted"
+                 ></WebView>
         
         <!--Status Bar-->
         <TextBlock x:Name="statusBar"

@@ -11,6 +11,7 @@
         <SolidColorBrush x:Key="wbLighterBlue" Color="#30475e"></SolidColorBrush>
         <SolidColorBrush x:Key="wbForegroundColor" Color="#f05454"></SolidColorBrush>
         <SolidColorBrush x:Key="wbLighterGrey" Color="#dddddd"></SolidColorBrush>
+        <SolidColorBrush x:Key="wbDarkTextColor" Color="#FF5984AE"></SolidColorBrush>
     </Application.Resources>
 
 </Application>

@@ -17,7 +17,9 @@
         <NavigationView x:ConnectionId='2' x:Name="settingsNavVeiw" 
                         Header="Settings"
                         PaneDisplayMode="Top"
-                        Grid.Row="1"></NavigationView>
+                        Grid.Row="1">
+            
+        </NavigationView>
     </Grid>
 </Page>
 

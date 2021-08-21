@@ -72,7 +72,26 @@ namespace WebBrowser
 
         private void MainBrowserWindow_Loading(FrameworkElement sender, object args)
         {
+            
+        }
+
+        private void webBrowser_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
+        {
+           
+        }
+
+        private void webBrowser_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            statusBar.Text = webBrowser.Source.AbsoluteUri;
+            TitleBarLabel.Text = "Awan Brother" +" | "+ webBrowser.DocumentTitle;
 
         }
+
+        private void webBrowser_Loading(FrameworkElement sender, object args)
+        {
+            statusBar.Text = webBrowser.Source.AbsoluteUri;
+        }
+
+
     }
 }
