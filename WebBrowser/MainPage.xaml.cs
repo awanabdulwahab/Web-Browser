@@ -69,5 +69,10 @@ namespace WebBrowser
         {
             this.Frame.Navigate(typeof(SettingPage));
         }
+
+        private void MainBrowserWindow_Loading(FrameworkElement sender, object args)
+        {
+
+        }
     }
 }

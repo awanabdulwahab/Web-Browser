@@ -9,6 +9,16 @@
     Background="{StaticResource wbBackgroundColor}">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Navigation View-->
+        <NavigationView x:Name="settingsNavVeiw" 
+                        Header="Settings"
+                        PaneDisplayMode="Top"
+                        Grid.Row="1">
+            
+        </NavigationView>
     </Grid>
 </Page>

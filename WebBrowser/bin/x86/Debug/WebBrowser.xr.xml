@@ -24,6 +24,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
       <RootProperty Name="Source" />
     </RootType>
@@ -68,6 +71,10 @@
       <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="WebBrowser.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
+      <RootProperty Name="Header" />
+      <RootProperty Name="PaneDisplayMode" />
+    </RootType>
     <RootType FullName="WebBrowser.SettingPage" />
   </Roots.RootTypes>
 </Roots>

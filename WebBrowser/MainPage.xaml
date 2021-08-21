@@ -6,16 +6,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{StaticResource wbBackgroundColor}">
+    Background="{StaticResource wbBackgroundColor}"
+    
+    x:Name="MainBrowserWindow" Loading="MainBrowserWindow_Loading">
         <!--Base Grid-->
     <Grid x:Name="BaseGrid">
         <Grid.RowDefinitions>
             <!--Title Bar Row Definition-->
-            <RowDefinition Height="25"></RowDefinition> 
+            <RowDefinition Height="32"></RowDefinition> 
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
-        
+        <TextBlock Text="Awan Browsers" VerticalAlignment="Center" Margin="10,0" Foreground="{StaticResource wbDarkTextColor}" ></TextBlock>
         <!--Title Bar Grid-->
         <Grid x:Name="TitleBarGrid" Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -81,5 +84,12 @@
         <WebView Grid.Row="2"
                  Source="http://www.google.co.uk"
                  x:Name="webBrowser"></WebView>
+        
+        <!--Status Bar-->
+        <TextBlock x:Name="statusBar"
+                   Grid.Row="3"
+                   VerticalAlignment="Center"
+                   Margin="10,0" 
+                   Foreground="{StaticResource wbDarkTextColor}"></TextBlock>
     </Grid>
 </Page>
