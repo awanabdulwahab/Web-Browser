@@ -15,9 +15,11 @@
             <!--Title Bar Row Definition-->
             <RowDefinition Height="32"></RowDefinition> 
             <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
+        
         <TextBlock x:Name="TitleBarLabel" Text="Awan Browsers" VerticalAlignment="Center" Margin="10,0" Foreground="{StaticResource wbDarkTextColor}" ></TextBlock>
         <!--Title Bar Grid-->
         <Grid x:Name="TitleBarGrid" Grid.Row="1">
@@ -80,16 +82,26 @@
             </Button>
         </Grid>
         
+        <!--Progress Bar-->
+
+        <ProgressBar x:Name="webBrowserProgressBar" 
+                     Grid.Row="2"
+                     Height="5" 
+                     Foreground="{StaticResource wbForegroundColor}"
+                     IsIndeterminate="False"
+                     IsEnabled="False" Margin="0,0,0,3" Background="{x:Null}"></ProgressBar>
+        
         <!--Web View-->
-        <WebView Grid.Row="2"
+        <WebView Grid.Row="3"
                  Source="http://www.google.co.uk"
                  x:Name="webBrowser" 
                  NavigationCompleted="webBrowser_NavigationCompleted"
+                 NavigationStarting="webBrowser_NavigationStarting_1"
                  ></WebView>
         
         <!--Status Bar-->
         <TextBlock x:Name="statusBar"
-                   Grid.Row="3"
+                   Grid.Row="4"
                    VerticalAlignment="Center"
                    Margin="10,0" 
                    Foreground="{StaticResource wbDarkTextColor}"></TextBlock>

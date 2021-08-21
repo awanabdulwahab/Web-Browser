@@ -82,6 +82,8 @@ namespace WebBrowser
 
         private void webBrowser_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
+            webBrowserProgressBar.IsEnabled = false;
+            webBrowserProgressBar.IsIndeterminate = false;
             statusBar.Text = webBrowser.Source.AbsoluteUri;
             TitleBarLabel.Text = "Awan Brother" +" | "+ webBrowser.DocumentTitle;
 
@@ -92,6 +94,10 @@ namespace WebBrowser
             statusBar.Text = webBrowser.Source.AbsoluteUri;
         }
 
-
+        private void webBrowser_NavigationStarting_1(WebView sender, WebViewNavigationStartingEventArgs args)
+        {
+            webBrowserProgressBar.IsEnabled = true;
+            webBrowserProgressBar.IsIndeterminate = true;
+        }
     }
 }
