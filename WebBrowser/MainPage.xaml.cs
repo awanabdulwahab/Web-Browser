@@ -82,6 +82,7 @@ namespace WebBrowser
 
         private void webBrowser_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
+            bool isSSL = false;
             webBrowserProgressBar.IsEnabled = false;
             webBrowserProgressBar.IsIndeterminate = false;
             statusBar.Text = webBrowser.Source.AbsoluteUri;
@@ -91,6 +92,30 @@ namespace WebBrowser
             if (!string.IsNullOrEmpty(txt_searchBar.Text))
             {
                 dataTransfer.SaveSearchTerm(txt_searchBar.Text, webBrowser.DocumentTitle, webBrowser.Source.AbsoluteUri); 
+            }
+
+
+            if (webBrowser.Source.AbsolutePath.Contains("https"))
+            {
+                isSSL = true;
+                // Change Icon Image
+                sslIcon.FontFamily = new FontFamily("Segoe MDL2 Assets");
+                sslIcon.Glyph = "\xe785";
+
+                ToolTip toolTip = new ToolTip();
+                toolTip.Content = "This website has a SSL certificate.";
+                ToolTipService.SetToolTip(sslBtn, toolTip);
+            }
+            else
+            {
+                isSSL = false;
+                // Change Icon Image
+                sslIcon.FontFamily = new FontFamily("Segoe MDL2 Assets");
+                sslIcon.Glyph = "\xe72e";
+
+                ToolTip toolTip = new ToolTip();
+                toolTip.Content = "This website is unsafe because it doesn't have SSL certificate.";
+                ToolTipService.SetToolTip(sslBtn, toolTip);
             }
 
         }

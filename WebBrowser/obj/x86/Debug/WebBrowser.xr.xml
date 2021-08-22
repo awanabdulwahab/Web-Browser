@@ -134,6 +134,11 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Glyph" />
+      <RootProperty Name="Foreground" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="PlaceholderText" />
@@ -159,11 +164,6 @@
       <RootProperty Name="Text" />
       <RootProperty Name="Icon" />
       <RootEvent Name="Click" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="Glyph" />
-      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="WebBrowser.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
