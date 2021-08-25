@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using muxc = Microsoft.UI.Xaml.Controls;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace WebBrowser
@@ -131,6 +133,28 @@ namespace WebBrowser
             webBrowserProgressBar.IsEnabled = true;
             webBrowserProgressBar.IsIndeterminate = true;
 
+        }
+
+        private void TabView_AddTabButtonClick(Microsoft.UI.Xaml.Controls.TabView sender, object args)
+        {
+            var newTab = new muxc.TabViewItem();
+            newTab.IconSource = new muxc.SymbolIconSource()
+            {
+                Symbol = Symbol.Document
+            };
+            newTab.Header = "Blank Page";
+            WebView wbView = new WebView();
+            newTab.Content = wbView;
+            wbView.Navigate(new Uri("https://www.google.com"));
+
+            sender.TabItems.Add(newTab);
+
+            sender.SelectedItem = newTab;
+        }
+
+        private void TabView_TabCloseRequested(muxc.TabView sender, muxc.TabViewTabCloseRequestedEventArgs args)
+        {
+            sender.TabItems.Remove(args.Tab);
         }
     }
 }

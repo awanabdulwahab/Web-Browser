@@ -135,6 +135,8 @@
       <RootProperty Name="TabStripHeader" />
       <RootProperty Name="TabStripFooter" />
       <RootProperty Name="TabItems" />
+      <RootEvent Name="AddTabButtonClick" />
+      <RootEvent Name="TabCloseRequested" />
     </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.TabViewItem">
       <RootProperty Name="Header" />
