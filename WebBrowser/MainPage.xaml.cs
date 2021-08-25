@@ -116,6 +116,7 @@ namespace WebBrowser
                 ToolTip toolTip = new ToolTip();
                 toolTip.Content = "This website is unsafe because it doesn't have SSL certificate.";
                 ToolTipService.SetToolTip(sslBtn, toolTip);
+                
             }
 
         }
@@ -129,6 +130,7 @@ namespace WebBrowser
         {
             webBrowserProgressBar.IsEnabled = true;
             webBrowserProgressBar.IsIndeterminate = true;
+
         }
     }
 }

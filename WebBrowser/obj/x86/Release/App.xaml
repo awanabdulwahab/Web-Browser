@@ -4,14 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WebBrowser">
 
+
     <Application.Resources>
-        
-                   <!--Web Browser Custom Colors-->
-        <SolidColorBrush x:Key="wbBackgroundColor" Color="#222831"></SolidColorBrush>
-        <SolidColorBrush x:Key="wbLighterBlue" Color="#30475e"></SolidColorBrush>
-        <SolidColorBrush x:Key="wbForegroundColor" Color="#f05454"></SolidColorBrush>
-        <SolidColorBrush x:Key="wbLighterGrey" Color="#dddddd"></SolidColorBrush>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            <ResourceDictionary Source="\CustomResources.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 
 </Application>
+
+
 

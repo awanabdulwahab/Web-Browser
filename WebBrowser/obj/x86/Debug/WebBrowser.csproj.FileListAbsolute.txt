@@ -48,3 +48,7 @@ D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingsPage.g.i.cs
 D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingsPage.g.cs
 D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingsPage.xaml
 D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\SettingsPage.xbf
+D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\CustomResources.xaml
+D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\CustomResources.xbf
+D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\CustomResources.xbf
+D:\C#\UWP Projects\WebBrowser\WebBrowser\obj\x86\Debug\Microsoft.UI.Xaml.pri.xml

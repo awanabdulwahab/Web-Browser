@@ -5,6 +5,7 @@
     xmlns:local="using:WebBrowser"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc ="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{StaticResource wbBackgroundColor}"
     
@@ -32,23 +33,23 @@
             
             <!--Forward and Backward Button-->
             <StackPanel Orientation="Horizontal" Margin="10,0">
-                <Button x:ConnectionId='11' x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
+                <Button x:ConnectionId='12' x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
                                              
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72b;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
 
                 </Button>
-                <Button x:ConnectionId='12' x:Name="forwardBtn"  Background="{x:Null}"
+                <Button x:ConnectionId='13' x:Name="forwardBtn"  Background="{x:Null}"
                                                 
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72a;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
-                <Button x:ConnectionId='13' x:Name="refreshBtn"  Background="{x:Null}"
+                <Button x:ConnectionId='14' x:Name="refreshBtn"  Background="{x:Null}"
                                                 
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72c;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
-                <Button x:ConnectionId='14' x:Name="homeBtn"  Background="{x:Null}"
+                <Button x:ConnectionId='15' x:Name="homeBtn"  Background="{x:Null}"
                                              
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe80f;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
@@ -56,8 +57,10 @@
             </StackPanel>
             
             <!-- SSL CertIcon-->
-            <FontIcon x:ConnectionId='8' x:Name="sslIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xe72e;" Grid.Column="1" Foreground="{StaticResource wbDarkTextColor}"/>
-            
+            <Button x:ConnectionId='8' x:Name="sslBtn" Grid.Column="1" Padding="0" Background="{x:Null}">
+                <FontIcon x:ConnectionId='11' x:Name="sslIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xe72e;"  Foreground="{StaticResource wbDarkTextColor}"/>
+            </Button>
+
             <!--Search Bar-->
             <TextBox x:ConnectionId='9' x:Name="txt_searchBar" 
                      Grid.Column="2"
@@ -94,17 +97,39 @@
                      Foreground="{StaticResource wbForegroundColor}"
                      IsIndeterminate="False"
                      IsEnabled="False" Margin="0,0,0,3" Background="{x:Null}"></ProgressBar>
-        
-        <!--Web View-->
-        <WebView x:ConnectionId='6' Grid.Row="3"
+
+        <muxc:TabView Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{StaticResource wbBackgroundColor}">
+            <muxc:TabView.TabStripHeader>
+                <Grid>
+                    
+                </Grid>
+            </muxc:TabView.TabStripHeader>
+            <muxc:TabView.TabStripFooter>
+                <Grid>
+                    
+                </Grid>
+            </muxc:TabView.TabStripFooter>
+            <muxc:TabView.TabItems>
+                <muxc:TabViewItem Header="Blank Page">
+                    <muxc:TabViewItem.IconSource>
+                        <muxc:SymbolIconSource Symbol="Add"></muxc:SymbolIconSource>
+                    </muxc:TabViewItem.IconSource>
+                    
+                    <WebView x:ConnectionId='7' Grid.Row="3"
                  Source="http://www.google.co.uk"
+                 Visibility="Collapsed"
                  x:Name="webBrowser" 
                                                                      
                                                                      
                  ></WebView>
+                </muxc:TabViewItem>
+            </muxc:TabView.TabItems>
+        </muxc:TabView>
+        <!--Web View-->
+        
         
         <!--Status Bar-->
-        <TextBlock x:ConnectionId='7' x:Name="statusBar"
+        <TextBlock x:ConnectionId='6' x:Name="statusBar"
                    Grid.Row="4"
                    VerticalAlignment="Center"
                    Margin="10,0" 
