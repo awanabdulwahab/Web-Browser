@@ -85,8 +85,6 @@ namespace WebBrowser
         private void webBrowser_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
             bool isSSL = false;
-            webBrowserProgressBar.IsEnabled = false;
-            webBrowserProgressBar.IsIndeterminate = false;
             statusBar.Text = webBrowser.Source.AbsoluteUri;
             TitleBarLabel.Text = "Awan Brother" +" | "+ webBrowser.DocumentTitle;
 
@@ -130,8 +128,7 @@ namespace WebBrowser
 
         private void webBrowser_NavigationStarting_1(WebView sender, WebViewNavigationStartingEventArgs args)
         {
-            webBrowserProgressBar.IsEnabled = true;
-            webBrowserProgressBar.IsIndeterminate = true;
+
 
         }
 
@@ -155,6 +152,12 @@ namespace WebBrowser
         private void TabView_TabCloseRequested(muxc.TabView sender, muxc.TabViewTabCloseRequestedEventArgs args)
         {
             sender.TabItems.Remove(args.Tab);
+        }
+
+        private void searchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //search
+            Search();
         }
     }
 }

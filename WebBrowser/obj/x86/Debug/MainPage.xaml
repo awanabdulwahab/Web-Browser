@@ -14,9 +14,8 @@
     <Grid x:ConnectionId='2' x:Name="BaseGrid">
         <Grid.RowDefinitions>
             <!--Title Bar Row Definition-->
-            <RowDefinition Height="32"></RowDefinition> 
+            <RowDefinition Height="32"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="5"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
@@ -28,37 +27,44 @@
                 <ColumnDefinition></ColumnDefinition> <!--Navigation Button Column Definition-->
                 <ColumnDefinition Width="25"></ColumnDefinition>
                 <ColumnDefinition Width="2*"></ColumnDefinition> <!--Search Bar Column Definition-->
+                <ColumnDefinition Width="50"></ColumnDefinition> <!--Search Button Column Definition-->
                 <ColumnDefinition></ColumnDefinition> <!--setting Column Definition-->
             </Grid.ColumnDefinitions>
             
             <!--Forward and Backward Button-->
             <StackPanel Orientation="Horizontal" Margin="10,0">
-                <Button x:ConnectionId='13' x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
+                <Button x:ConnectionId='16' x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
                                              
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72b;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
 
                 </Button>
-                <Button x:ConnectionId='14' x:Name="forwardBtn"  Background="{x:Null}"
+
+                <Button x:ConnectionId='17' x:Name="forwardBtn"  Background="{x:Null}"
                                                 
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72a;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
+                <Button x:ConnectionId='14' x:Name="homeBtn"  Background="{x:Null}"
+                                             
+                        BorderThickness="0">
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe80f;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
+                </Button>
+                <Rectangle Fill="{StaticResource wbLighterBlue}" Width="1" Margin="10,5"></Rectangle>
                 <Button x:ConnectionId='15' x:Name="refreshBtn"  Background="{x:Null}"
                                                 
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72c;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
-                <Button x:ConnectionId='16' x:Name="homeBtn"  Background="{x:Null}"
-                                             
-                        BorderThickness="0">
-                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe80f;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
-                </Button>
+
             </StackPanel>
             
             <!-- SSL CertIcon-->
-            <Button x:ConnectionId='9' x:Name="sslBtn" Grid.Column="1" Padding="0" Background="{x:Null}">
-                <FontIcon x:ConnectionId='12' x:Name="sslIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xe72e;"  Foreground="{StaticResource wbDarkTextColor}"/>
+            <Button x:ConnectionId='9' x:Name="sslBtn" Grid.Column="1" Padding="0" Background="{x:Null}" BorderThickness="0">
+                <FontIcon x:ConnectionId='13' x:Name="sslIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xe72e;"  Foreground="{StaticResource wbDarkTextColor}"/>
             </Button>
 
             <!--Search Bar-->
@@ -69,16 +75,20 @@
                      Height="28"
                      VerticalContentAlignment="Center"
                      BorderThickness="0"                                ></TextBox>
-            
+            <!--Seacrh Button-->
+
+            <Button x:ConnectionId='11' x:Name="searchBtn" Grid.Column="3" Background="{x:Null}" BorderThickness="0"                        >
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe721;" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
+            </Button>
             <!--Setting Flyout-->
-            <Button Grid.Column="3"
+            <Button Grid.Column="4"
                     HorizontalAlignment="Right"
                     Margin="10,0" Background="{x:Null}" Foreground="{StaticResource wbForegroundColor}"
                     BorderThickness="0">
                 <!--Settings button Flyout-->
                 <Button.Flyout>
                     <MenuFlyout>
-                        <MenuFlyoutItem x:ConnectionId='11' Text="Settings" x:Name="settingBtn"                         >
+                        <MenuFlyoutItem x:ConnectionId='12' Text="Settings" x:Name="settingBtn"                         >
                             <MenuFlyoutItem.Icon>
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe713;"></FontIcon>
                             </MenuFlyoutItem.Icon>
@@ -88,20 +98,14 @@
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"></FontIcon>
             </Button>
         </Grid>
-        
-        <!--Progress Bar-->
 
-        <ProgressBar x:ConnectionId='5' x:Name="webBrowserProgressBar" 
-                     Grid.Row="2"
-                     Height="5" 
-                     Foreground="{StaticResource wbForegroundColor}"
-                     IsIndeterminate="False"
-                     IsEnabled="False" Margin="0,0,0,3" Background="{x:Null}"></ProgressBar>
-
-        <muxc:TabView x:ConnectionId='6' Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{StaticResource wbBackgroundColor}"                                                                                            >
+        <muxc:TabView x:ConnectionId='5' Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{StaticResource wbBackgroundColor}"                                                                                            >
             <muxc:TabView.TabStripHeader>
                 <Grid>
-                    
+                        <!--Progress Ring-->
+                    <ProgressRing x:ConnectionId='7' x:Name="brwoserRing" Margin="10,0" IsActive="True" Foreground="{StaticResource wbForegroundColor}">
+                        
+                    </ProgressRing>
                 </Grid>
             </muxc:TabView.TabStripHeader>
             <muxc:TabView.TabStripFooter>
@@ -129,8 +133,8 @@
         
         
         <!--Status Bar-->
-        <TextBlock x:ConnectionId='7' x:Name="statusBar"
-                   Grid.Row="4"
+        <TextBlock x:ConnectionId='6' x:Name="statusBar"
+                   Grid.Row="3"
                    VerticalAlignment="Center"
                    Margin="10,0" 
                    Foreground="{StaticResource wbDarkTextColor}"></TextBlock>
