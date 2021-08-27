@@ -15,12 +15,7 @@
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
-      <RootProperty Name="Style" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Foreground" />
-    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
       <RootProperty Name="Background" />
       <RootProperty Name="TabNavigation" />
@@ -96,6 +91,8 @@
       <RootProperty Name="Fill" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -111,6 +108,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
+      <RootProperty Name="RequestedTheme" />
       <RootEvent Name="Loading" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
@@ -194,17 +192,15 @@
       <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="WebBrowser.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
-      <RootProperty Name="Title" />
-      <RootProperty Name="Items" />
+    <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
+      <RootProperty Name="IsPaneOpen" />
+      <RootProperty Name="IsSettingsVisible" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="MenuItems" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
-      <RootProperty Name="Header" />
+    <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
+      <RootProperty Name="Icon" />
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
-      <RootProperty Name="Background" />
-      <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="WebBrowser.SettingPage" />
   </Roots.RootTypes>

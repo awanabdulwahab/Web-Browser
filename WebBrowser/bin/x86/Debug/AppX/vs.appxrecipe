@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>A23FE852CDE13AAAF69B9DF604D6F033ADDB385B48F78C9B0D194F5BBB3C7F30</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>29E196B1666C5BE83627BB87769D528FE8718B5CAE203B909276802D040D5B78</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>20d8ef10-59d4-4459-b5a9-a5cbdf37cb7c_1.0.0.0_x86__75cr2b68sm664</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>20d8ef10-59d4-4459-b5a9-a5cbdf37cb7c_75cr2b68sm664!App</RegisteredUserModeAppID>
     <RegisteredPackageID>20d8ef10-59d4-4459-b5a9-a5cbdf37cb7c</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-25T12:23:54.949</Modified>
+      <Modified>2021-08-27T10:55:50.430</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\WebBrowser.exe">
       <PackagePath>entrypoint\WebBrowser.exe</PackagePath>
-      <Modified>2021-08-25T12:23:53.028</Modified>
+      <Modified>2021-08-27T10:55:48.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -54,15 +54,230 @@
       <PackagePath>Assets\imgs\forward.png</PackagePath>
       <Modified>2021-08-21T09:49:17.678</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.853</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.906</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.993</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.098</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.044</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.071</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.090</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.111</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.152</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.945</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:58.030</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:58.154</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-21T09:49:17.678</Modified>
+      <Modified>2021-08-26T12:22:59.046</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.224</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.249</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.279</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.466</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.803</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.817</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.890</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.832</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.848</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.689</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.788</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.724</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.746</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.475</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.493</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.516</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-21T09:49:17.678</Modified>
+      <Modified>2021-08-26T12:22:57.569</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.588</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.608</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.674</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.622</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:57.637</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:59.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:59.083</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:59.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:59.145</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:59.181</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.504</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.537</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.578</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-26T12:22:56.807</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -71,32 +286,27 @@
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-16T17:34:49.728</Modified>
+      <Modified>2021-08-26T12:22:58.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-16T17:34:49.729</Modified>
+      <Modified>2021-08-26T12:22:56.353</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-16T17:34:49.731</Modified>
+      <Modified>2021-08-26T12:22:57.539</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-16T17:34:49.733</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-16T17:34:49.735</Modified>
+      <Modified>2021-08-26T12:22:57.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-16T17:34:49.736</Modified>
+      <Modified>2021-08-26T12:22:56.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -104,23 +314,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\WebBrowser.xr.xml">
       <PackagePath>WebBrowser.xr.xml</PackagePath>
-      <Modified>2021-08-25T12:17:12.036</Modified>
+      <Modified>2021-08-27T10:53:35.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-08-25T11:53:36.065</Modified>
+      <Modified>2021-08-27T10:37:00.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\CustomResources.xbf">
       <PackagePath>CustomResources.xbf</PackagePath>
-      <Modified>2021-08-25T12:23:52.841</Modified>
+      <Modified>2021-08-27T10:55:48.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-08-25T12:23:52.841</Modified>
+      <Modified>2021-08-27T10:37:00.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>
-      <Modified>2021-08-25T11:53:36.065</Modified>
+      <Modified>2021-08-27T10:55:48.450</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -132,11 +342,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-08-25T05:06:16.234</Modified>
+      <Modified>2021-08-27T10:37:03.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\Core\WebBrowser.exe">
       <PackagePath>WebBrowser.exe</PackagePath>
-      <Modified>2021-08-25T12:23:54.932</Modified>
+      <Modified>2021-08-27T10:55:50.391</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

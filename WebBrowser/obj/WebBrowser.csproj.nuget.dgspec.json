@@ -46,6 +46,10 @@
             "Microsoft.UI.Xaml": {
               "target": "Package",
               "version": "[2.6.2, )"
+            },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[2.0.3, )"
             }
           },
           "imports": [

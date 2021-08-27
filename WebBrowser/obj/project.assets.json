@@ -8282,7 +8282,8 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12",
-      "Microsoft.UI.Xaml >= 2.6.2"
+      "Microsoft.UI.Xaml >= 2.6.2",
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -8332,6 +8333,10 @@
           "Microsoft.UI.Xaml": {
             "target": "Package",
             "version": "[2.6.2, )"
+          },
+          "NETStandard.Library": {
+            "target": "Package",
+            "version": "[2.0.3, )"
           }
         },
         "imports": [

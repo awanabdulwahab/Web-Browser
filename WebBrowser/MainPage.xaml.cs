@@ -12,8 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
 using muxc = Microsoft.UI.Xaml.Controls;
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -70,6 +70,26 @@ namespace WebBrowser
         private void settingBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SettingPage));
+            //AddSettingsTab();
+        }
+
+        private void AddSettingsTab()
+        {
+            var settingsTab = new muxc.TabViewItem();
+            settingsTab.Header = "Settings";
+            settingsTab.IconSource = new muxc.SymbolIconSource()
+            {
+                Symbol = Symbol.Setting
+            };
+
+            Frame frame = new Frame();
+            settingsTab.Content = frame;
+            frame.Navigate(typeof(SettingPage));
+
+            // TODO: Look for this issue after first built
+            //TabControl.TabItems.Add(settingsTab);
+            //TabControl.SelectedItem = settingsTab;
+
         }
 
         private void MainBrowserWindow_Loading(FrameworkElement sender, object args)
