@@ -252,11 +252,23 @@
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\AccountSetMenu.xbf">
+      <PackagePath>AccountSetMenu.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\BookmarkSetMenu.xbf">
+      <PackagePath>BookmarkSetMenu.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\CustomResources.xbf">
       <PackagePath>CustomResources.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\HistorySetMenu.xbf">
+      <PackagePath>HistorySetMenu.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\SearchSetMenu.xbf">
+      <PackagePath>SearchSetMenu.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>

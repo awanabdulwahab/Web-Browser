@@ -8,7 +8,8 @@
     mc:Ignorable="d"
     Background="{StaticResource wbListBoxBackgorund}"
     RequestedTheme="Dark"
-    x:Name="settingsPage">
+    x:Name="settingsPage"
+                                >
 
     <Grid>
         <Grid.RowDefinitions>
@@ -17,17 +18,18 @@
         </Grid.RowDefinitions>
         <Rectangle Fill="{StaticResource wbForegroundColor}" Height="1" VerticalAlignment="Top"></Rectangle>
         <!--Navigation View-->
-        <NavigationView x:ConnectionId='2' x:Name="SettingsView" Grid.Row="1" IsPaneOpen="False" IsSettingsVisible="False" Margin="0,1,0,0" >
+        <NavigationView x:ConnectionId='2' x:Name="SettingsView" Grid.Row="1" PaneTitle="Settings" IsPaneOpen="False" IsSettingsVisible="False" Margin="0,1,0,0"                                                                                             IsBackEnabled="True">
             <NavigationView.MenuItems >
-                <NavigationViewItem Icon="Account" Content="Account"></NavigationViewItem><!-- Profile Account-->
-                <NavigationViewItem Icon="Bookmarks" Content="Bookmarks"></NavigationViewItem>
-                <NavigationViewItem Icon="Clock" Content="History"></NavigationViewItem>
-                <NavigationViewItem Content="Search">
+                <NavigationViewItem Tag="accountSetMenu" Icon="Account" Content="Account"></NavigationViewItem><!-- Profile Account-->
+                <NavigationViewItem Tag="bookmarkSetMenu" Icon="Bookmarks" Content="Bookmarks"></NavigationViewItem>
+                <NavigationViewItem Tag="historySetMenu" Icon="Clock" Content="History"></NavigationViewItem>
+                <NavigationViewItem Content="Search" Tag="searchSetMenu">
                     <NavigationViewItem.Icon>
                         <FontIcon x:ConnectionId='3' x:Name="sslIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xe721;"></FontIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
+            <Frame x:ConnectionId='4' x:Name="ContentFrame"></Frame>
         </NavigationView>
     </Grid>
 </Page>

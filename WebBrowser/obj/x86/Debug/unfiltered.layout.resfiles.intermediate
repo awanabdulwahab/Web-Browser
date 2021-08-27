@@ -52,9 +52,13 @@ Assets\Wide310x150Logo.scale-125.png
 Assets\Wide310x150Logo.scale-150.png
 Assets\Wide310x150Logo.scale-200.png
 Assets\Wide310x150Logo.scale-400.png
+AccountSetMenu.xbf
 App.xbf
+BookmarkSetMenu.xbf
 CustomResources.xbf
+HistorySetMenu.xbf
 MainPage.xbf
+SearchSetMenu.xbf
 SettingsPage.xbf
 WebBrowser.xr.xml
 Properties\Default.rd.xml
