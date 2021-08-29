@@ -66,15 +66,18 @@ namespace WebBrowser
         private void Search()
         {
 
-            if (currentSelectedWebView == null || !string.IsNullOrEmpty(txt_searchBar.Text))
+            if (currentSelectedWebView == null)
             {
                 webBrowser.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text); 
             }
             else
             {
                 currentSelectedWebView.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
+                
             }
         }
+
+
 
         private void homeBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -186,11 +189,23 @@ namespace WebBrowser
             sender.TabItems.Add(newTab);
 
             sender.SelectedItem = newTab;
+
+            wbView.NavigationCompleted += BrowserNavigated;
+        }
+
+        private void BrowserNavigated(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            var view = sender as WebView;
+            var tab = view.Parent as muxc.TabViewItem;
+
+            tab.Header = view.DocumentTitle;
         }
 
         private void TabView_TabCloseRequested(muxc.TabView sender, muxc.TabViewTabCloseRequestedEventArgs args)
         {
             sender.TabItems.Remove(args.Tab);
+            currentSelectedTab = null;
+            currentSelectedWebView = null;
             if (args.Tab.Name == "settingsTab")
             {
                 settingsTabCount = 0; 
@@ -208,12 +223,17 @@ namespace WebBrowser
 
         private void TabView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            currentSelectedTab = TabControl.SelectedItem as muxc.TabViewItem;
-            currentSelectedWebView = currentSelectedTab.Content as WebView;
 
-            TitleBarLabel.Text = "Awan Browser | " + currentSelectedWebView.DocumentTitle;
-            statusBar.Text = currentSelectedWebView.Source.AbsoluteUri;
+            currentSelectedTab = TabControl.SelectedItem as muxc.TabViewItem;
+            if (currentSelectedTab !=null)
+            {
+                currentSelectedWebView = currentSelectedTab.Content as WebView;
+
+                TitleBarLabel.Text = "Awan Browser | " + currentSelectedWebView.DocumentTitle;
+                statusBar.Text = currentSelectedWebView.Source.AbsoluteUri;
+            }
+
+            
 
         }
     }
