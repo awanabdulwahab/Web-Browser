@@ -101,5 +101,29 @@ namespace WebBrowser
             return list;
 
         }
+
+        public async Task<List<string>> SearchEngineList(string AttributeSource)
+        {
+            List<string> list = new List<string>();
+
+            await Task.Run(async () =>
+            {
+                var file = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
+                XmlDocument doc = await XmlDocument.LoadFromFileAsync(file);
+
+                var searchengine = doc.GetElementsByTagName("searchEngine");
+
+                var searchChild = searchengine[0].ChildNodes;
+
+                for (int j = 0; j < searchChild.Count; j++)
+                {
+                    if (searchChild[j].NodeName == "engine")
+                    {
+                        list.Add(searchChild[j].Attributes.GetNamedItem(AttributeSource).InnerText);
+                    }
+                }
+            });
+            return list;
+        }
     }
 }

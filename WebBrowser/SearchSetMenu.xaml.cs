@@ -26,5 +26,26 @@ namespace WebBrowser
         {
             this.InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            Setup();
+        }
+
+        private async void Setup()
+        {
+            DataTransfer dt = new DataTransfer();
+            List<string> engineList = await dt.SearchEngineList("name");
+            foreach (var item in engineList)
+            {
+                ComboBoxItem comboBoxItem = new ComboBoxItem();
+
+                comboBoxItem.Content = item;
+
+                searchEngineCombo.Items.Add(comboBoxItem);
+
+            }
+
+        }
     }
 }

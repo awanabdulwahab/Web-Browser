@@ -7,9 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{StaticResource wbBackgroundColor}"
-    RequestedTheme="Dark">
+    RequestedTheme="Dark"
+    Loaded="Page_Loaded">
 
     <Grid>
-        <TextBlock Text="Search Page" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="60"></TextBlock>
+        <ComboBox Margin="10"
+                  Padding="20,0"
+                  Header="Choose Default Search Engine"
+                  x:Name="searchEngineCombo"></ComboBox>
     </Grid>
 </Page>

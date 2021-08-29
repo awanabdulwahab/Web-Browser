@@ -229,11 +229,14 @@ namespace WebBrowser
             {
                 currentSelectedWebView = currentSelectedTab.Content as WebView;
 
-                TitleBarLabel.Text = "Awan Browser | " + currentSelectedWebView.DocumentTitle;
-                statusBar.Text = currentSelectedWebView.Source.AbsoluteUri;
+                if (currentSelectedWebView != null)
+                {
+                    TitleBarLabel.Text = "Awan Browser | " + currentSelectedWebView.DocumentTitle;
+                    statusBar.Text = currentSelectedWebView.Source.AbsoluteUri; 
+                }
             }
 
-            
+
 
         }
     }
