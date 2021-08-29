@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.UI.Xaml.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 using muxc = Microsoft.UI.Xaml.Controls;
 
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace WebBrowser
@@ -24,6 +26,10 @@ namespace WebBrowser
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        int settingsTabCount = 0;
+        muxc.TabViewItem currentSelectedTab = null;
+        WebView currentSelectedWebView = null;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -59,7 +65,15 @@ namespace WebBrowser
 
         private void Search()
         {
-            webBrowser.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
+
+            if (currentSelectedWebView == null || !string.IsNullOrEmpty(txt_searchBar.Text))
+            {
+                webBrowser.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text); 
+            }
+            else
+            {
+                currentSelectedWebView.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
+            }
         }
 
         private void homeBtn_Click(object sender, RoutedEventArgs e)
@@ -69,26 +83,31 @@ namespace WebBrowser
 
         private void settingBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SettingPage));
-            //AddSettingsTab();
+            //this.Frame.Navigate(typeof(SettingPage));
+            if (settingsTabCount == 0)
+            {
+                AddSettingsTab();
+                settingsTabCount++;
+            }
         }
 
         private void AddSettingsTab()
         {
             var settingsTab = new muxc.TabViewItem();
             settingsTab.Header = "Settings";
+            settingsTab.Name = "settingsTab";
             settingsTab.IconSource = new muxc.SymbolIconSource()
             {
                 Symbol = Symbol.Setting
             };
 
             Frame frame = new Frame();
-            settingsTab.Content = frame;
             frame.Navigate(typeof(SettingPage));
+            settingsTab.Content = frame;
 
             // TODO: Look for this issue after first built
-            //TabControl.TabItems.Add(settingsTab);
-            //TabControl.SelectedItem = settingsTab;
+            TabControl.TabItems.Add(settingsTab);
+            TabControl.SelectedItem = settingsTab;
 
         }
 
@@ -172,12 +191,30 @@ namespace WebBrowser
         private void TabView_TabCloseRequested(muxc.TabView sender, muxc.TabViewTabCloseRequestedEventArgs args)
         {
             sender.TabItems.Remove(args.Tab);
+            if (args.Tab.Name == "settingsTab")
+            {
+                settingsTabCount = 0; 
+            }
         }
 
         private void searchBtn_Click(object sender, RoutedEventArgs e)
         {
             //search
-            Search();
+            if (string.IsNullOrEmpty(txt_searchBar.Text))
+            {
+                Search(); 
+            }
+        }
+
+        private void TabView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+            currentSelectedTab = TabControl.SelectedItem as muxc.TabViewItem;
+            currentSelectedWebView = currentSelectedTab.Content as WebView;
+
+            TitleBarLabel.Text = "Awan Browser | " + currentSelectedWebView.DocumentTitle;
+            statusBar.Text = currentSelectedWebView.Source.AbsoluteUri;
+
         }
     }
 }

@@ -7,10 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{StaticResource wbBackgroundColor}"
-    RequestedTheme="Dark">
+    RequestedTheme="Dark"
+    Loaded="Page_Loaded">
 
     <Grid>
-        <TextBlock Text="History Page" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="60"></TextBlock>
-
+        <ListBox x:Name="listory" Background="{x:Null}"></ListBox>
     </Grid>
 </Page>

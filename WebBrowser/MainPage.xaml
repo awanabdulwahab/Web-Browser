@@ -99,7 +99,7 @@
             </Button>
         </Grid>
 
-        <muxc:TabView Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{StaticResource wbBackgroundColor}" AddTabButtonClick="TabView_AddTabButtonClick" TabCloseRequested="TabView_TabCloseRequested">
+        <muxc:TabView x:Name="TabControl" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{StaticResource wbBackgroundColor}" AddTabButtonClick="TabView_AddTabButtonClick" TabCloseRequested="TabView_TabCloseRequested" SelectionChanged="TabView_SelectionChanged">
             <muxc:TabView.TabStripHeader>
                 <Grid>
                         <!--Progress Ring-->

@@ -16,8 +16,8 @@
       <RootProperty Name="Background" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Content" />
-      <RootEvent Name="Loading" />
       <RootEvent Name="Loaded" />
+      <RootEvent Name="Loading" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -122,6 +122,10 @@
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="Background" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
     <RootType FullName="WebBrowser.HistorySetMenu" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -135,6 +139,7 @@
       <RootProperty Name="TabItems" />
       <RootEvent Name="AddTabButtonClick" />
       <RootEvent Name="TabCloseRequested" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
       <RootProperty Name="Margin" />
@@ -181,7 +186,6 @@
       <RootProperty Name="BorderThickness" />
       <RootEvent Name="KeyDown" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout">
       <RootProperty Name="Items" />
     </RootType>
@@ -200,11 +204,12 @@
     <RootType FullName="WebBrowser.MainPage" />
     <RootType FullName="WebBrowser.SearchSetMenu" />
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
+      <RootProperty Name="IsPaneToggleButtonVisible" />
       <RootProperty Name="PaneTitle" />
       <RootProperty Name="IsPaneOpen" />
       <RootProperty Name="IsSettingsVisible" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="IsBackEnabled" />
+      <RootProperty Name="IsBackButtonVisible" />
       <RootProperty Name="MenuItems" />
       <RootProperty Name="Content" />
       <RootEvent Name="SelectionChanged" />

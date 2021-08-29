@@ -12,13 +12,10 @@
     Loaded="settingsPage_Loaded">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="25"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+
         <Rectangle Fill="{StaticResource wbForegroundColor}" Height="1" VerticalAlignment="Top"></Rectangle>
         <!--Navigation View-->
-        <NavigationView x:Name="SettingsView" Grid.Row="1" PaneTitle="Settings" IsPaneOpen="False" IsSettingsVisible="False" Margin="0,1,0,0" SelectionChanged="SettingsView_SelectionChanged" BackRequested="SettingsView_BackRequested" IsBackEnabled="True">
+        <NavigationView x:Name="SettingsView" Grid.Row="1" IsPaneToggleButtonVisible="True" PaneTitle="Settings" IsPaneOpen="False" IsSettingsVisible="False" Margin="0,1,0,0" SelectionChanged="SettingsView_SelectionChanged" BackRequested="SettingsView_BackRequested" IsBackButtonVisible="Collapsed" >
             <NavigationView.MenuItems >
                 <NavigationViewItem Tag="accountSetMenu" Icon="Account" Content="Account"></NavigationViewItem><!-- Profile Account-->
                 <NavigationViewItem Tag="bookmarkSetMenu" Icon="Bookmarks" Content="Bookmarks"></NavigationViewItem>

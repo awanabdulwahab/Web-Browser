@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="WebBrowser.HistorySetMenu"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,11 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{StaticResource wbBackgroundColor}"
-    RequestedTheme="Dark">
+    RequestedTheme="Dark"
+                        >
 
     <Grid>
-        <TextBlock Text="History Page" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="60"></TextBlock>
-
+        <ListBox x:ConnectionId='2' x:Name="listory" Background="{x:Null}"></ListBox>
     </Grid>
 </Page>
 

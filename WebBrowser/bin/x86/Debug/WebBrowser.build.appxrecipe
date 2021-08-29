@@ -279,55 +279,55 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+      <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\C#\UWP Projects\WebBrowser\WebBrowser\bin\x86\Debug\Core\WebBrowser.exe">
       <PackagePath>WebBrowser.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
-      <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>
-    </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx">
-      <Name>Microsoft.UI.Xaml.2.6</Name>
-      <Version>2.62108.18004.0</Version>
+    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.1001.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.1001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx">
-      <Name>Microsoft.UI.Xaml.2.6</Name>
-      <Version>2.62108.18004.0</Version>
+    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.1001.0</Version>
       <Architecture>Win32</Architecture>
-      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.1001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.6.appx">
-      <Name>Microsoft.UI.Xaml.2.6</Name>
-      <Version>2.62108.18004.0</Version>
+    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.1001.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.1001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.6.appx">
-      <Name>Microsoft.UI.Xaml.2.6</Name>
-      <Version>2.62108.18004.0</Version>
+    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.1001.0</Version>
       <Architecture>arm</Architecture>
-      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.1001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\arm\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.6.appx">
-      <Name>Microsoft.UI.Xaml.2.6</Name>
-      <Version>2.62108.18004.0</Version>
+    <ResolvedSDKReference Include="C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx">
+      <Name>Microsoft.UI.Xaml.2.4</Name>
+      <Version>2.42005.1001.0</Version>
       <Architecture>arm64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.6, MinVersion = 2.62108.18004.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.6.2\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.6.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.4, MinVersion = 2.42005.1001.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Administrator\.nuget\packages\microsoft.ui.xaml\2.4.0\buildTransitive\..\tools\AppX\arm64\Release\Microsoft.UI.Xaml.2.4.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">

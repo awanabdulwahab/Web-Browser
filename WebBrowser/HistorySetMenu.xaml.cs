@@ -22,9 +22,30 @@ namespace WebBrowser
     /// </summary>
     public sealed partial class HistorySetMenu : Page
     {
+        int LBICount = 0;
         public HistorySetMenu()
         {
             this.InitializeComponent();
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            DataTransfer dataTransfer = new DataTransfer();
+            List<string> historyURLItems = await dataTransfer.Fetch("siteurl");
+
+            foreach (var item in historyURLItems)
+            {
+                ListBoxItem newLBI = new ListBoxItem();
+                newLBI.Name = "LBI" + LBICount;
+                LBICount++;
+
+                Style style = Application.Current.Resources["HistoryListBoxItem"] as Style;
+                newLBI.Style = style;
+
+                newLBI.Content = item;
+                listory.Items.Add(newLBI);
+
+            }
         }
     }
 }

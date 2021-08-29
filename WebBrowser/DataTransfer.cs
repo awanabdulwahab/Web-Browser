@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Xml.Dom;
 using Windows.Storage;
-
+using Windows.Data.Pdf;
 namespace WebBrowser
 {
     class DataTransfer
@@ -66,6 +66,40 @@ namespace WebBrowser
         {
             var file = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
             await doc.SaveToFileAsync(file);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Source"></param>
+        /// <returns></returns>
+        public async  Task<List<string>> Fetch(string Source)
+        {
+            List<string> list = new List<string>();
+            await Task.Run(async () => 
+            {
+                var file = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
+
+                XmlDocument doc = await XmlDocument.LoadFromFileAsync(file);
+
+                var historyItem = doc.GetElementsByTagName("historyItem");
+
+                for (int i = 0; i < historyItem.Count; i++)
+                {
+                    var historyItemChild = historyItem[i].ChildNodes;
+
+                    for (int j = 0; j < historyItemChild.Count; j++)
+                    {
+                        if(historyItemChild[j].NodeName == Source)
+                        {
+                            list.Add(historyItemChild[j].InnerText);
+                        }
+                    }
+                }
+            });
+            return list;
+
         }
     }
 }
