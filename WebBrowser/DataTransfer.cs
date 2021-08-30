@@ -125,5 +125,60 @@ namespace WebBrowser
             });
             return list;
         }
+
+        public async void SetSearchEngine(string EngineName)
+        {
+            var doc = await DocumentLoad();
+
+            var searchEnigne = doc.GetElementsByTagName("searchEngine");
+
+            var engines = searchEnigne[0].ChildNodes;
+
+            for (int i = 0; i < engines.Count; i++)
+            {
+                if (engines[i].NodeName == "engine")
+                {
+                    if (engines[i].Attributes.GetNamedItem("name").InnerText == EngineName)
+                    {
+                        engines[i].Attributes.GetNamedItem("selected").InnerText = true.ToString();
+                    }
+                    else
+                    {
+                        engines[i].Attributes.GetNamedItem("selected").InnerText = false.ToString();
+                    } 
+                }
+            }
+
+            SaveDocument(doc);
+        }
+
+        public async Task<string> GetSelectedEngineAttribute(string AttributeName)
+        {
+            string value = string.Empty;
+
+            await Task.Run(async () =>
+            {
+                var doc = await DocumentLoad();
+
+                var searchEngine = doc.GetElementsByTagName("searchEngine");
+
+                var engines = searchEngine[0].ChildNodes;
+
+
+                for (int i = 0; i < engines.Count; i++)
+                {
+                    if (engines[i].NodeName == "engine")
+                    {
+                        if (engines[i].Attributes.GetNamedItem("selected").InnerText == true.ToString())
+                        {
+                            value = engines[i].Attributes.GetNamedItem(AttributeName).InnerText;
+                        }
+                    }
+                }
+
+            });
+
+            return value;
+        }
     }
 }

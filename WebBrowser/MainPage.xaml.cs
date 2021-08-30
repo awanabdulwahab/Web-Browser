@@ -66,14 +66,17 @@ namespace WebBrowser
         private void Search()
         {
 
-            if (currentSelectedWebView == null)
+            if (currentSelectedTab.Name != "settingsTab")
             {
-                webBrowser.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text); 
-            }
-            else
-            {
-                currentSelectedWebView.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
-                
+                if (currentSelectedWebView == null)
+                {
+                    webBrowser.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
+                }
+                else
+                {
+                    currentSelectedWebView.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
+
+                } 
             }
         }
 
@@ -126,7 +129,6 @@ namespace WebBrowser
 
         private void webBrowser_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
-            bool isSSL = false;
             statusBar.Text = webBrowser.Source.AbsoluteUri;
             TitleBarLabel.Text = "Awan Brother" +" | "+ webBrowser.DocumentTitle;
 
@@ -136,31 +138,46 @@ namespace WebBrowser
                 dataTransfer.SaveSearchTerm(txt_searchBar.Text, webBrowser.DocumentTitle, webBrowser.Source.AbsoluteUri); 
             }
 
+            checkSSL();
 
-            if (webBrowser.Source.AbsolutePath.Contains("https"))
+            if (!statusBar.Text.Contains("BlankPage"))
             {
-                isSSL = true;
-                // Change Icon Image
-                sslIcon.FontFamily = new FontFamily("Segoe MDL2 Assets");
-                sslIcon.Glyph = "\xe785";
-
-                ToolTip toolTip = new ToolTip();
-                toolTip.Content = "This website has a SSL certificate.";
-                ToolTipService.SetToolTip(sslBtn, toolTip);
+                statusBar.Text = currentSelectedWebView.Source.AbsoluteUri;
             }
             else
             {
-                isSSL = false;
-                // Change Icon Image
-                sslIcon.FontFamily = new FontFamily("Segoe MDL2 Assets");
-                sslIcon.Glyph = "\xe72e";
-
-                ToolTip toolTip = new ToolTip();
-                toolTip.Content = "This website is unsafe because it doesn't have SSL certificate.";
-                ToolTipService.SetToolTip(sslBtn, toolTip);
-                
+                statusBar.Text = "Blank Page";
             }
 
+        }
+
+        private void checkSSL()
+        {
+            if (currentSelectedWebView != null)
+            {
+                if (webBrowser.Source.AbsolutePath.Contains("https"))
+                { 
+                    // Change Icon Image
+                    sslIcon.FontFamily = new FontFamily("Segoe MDL2 Assets");
+                    sslIcon.Glyph = "\xe785";
+
+                    ToolTip toolTip = new ToolTip();
+                    toolTip.Content = "This website has a SSL certificate.";
+                    ToolTipService.SetToolTip(sslBtn, toolTip);
+                }
+                else
+                {
+                    
+                    // Change Icon Image
+                    sslIcon.FontFamily = new FontFamily("Segoe MDL2 Assets");
+                    sslIcon.Glyph = "\xe72e";
+
+                    ToolTip toolTip = new ToolTip();
+                    toolTip.Content = "This website is unsafe because it doesn't have SSL certificate.";
+                    ToolTipService.SetToolTip(sslBtn, toolTip);
+
+                }
+            }
         }
 
         private void webBrowser_Loading(FrameworkElement sender, object args)

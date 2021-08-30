@@ -206,6 +206,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Header" />
+      <RootEvent Name="DropDownClosed" />
     </RootType>
     <RootType FullName="WebBrowser.SearchSetMenu" />
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">

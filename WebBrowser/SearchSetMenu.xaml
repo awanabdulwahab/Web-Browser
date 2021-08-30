@@ -14,6 +14,6 @@
         <ComboBox Margin="10"
                   Padding="20,0"
                   Header="Choose Default Search Engine"
-                  x:Name="searchEngineCombo"></ComboBox>
+                  x:Name="searchEngineCombo" DropDownClosed="searchEngineCombo_DropDownClosed"></ComboBox>
     </Grid>
 </Page>

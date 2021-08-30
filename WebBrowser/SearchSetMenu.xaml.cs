@@ -30,6 +30,14 @@ namespace WebBrowser
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             Setup();
+            SetSelectedEngine();
+        }
+
+        private void SetSelectedEngine()
+        {
+            DataTransfer dt = new DataTransfer();
+
+            searchEngineCombo.SelectedItem = dt.GetSelectedEngineAttribute("name");
         }
 
         private async void Setup()
@@ -43,9 +51,20 @@ namespace WebBrowser
                 comboBoxItem.Content = item;
 
                 searchEngineCombo.Items.Add(comboBoxItem);
+                if (await dt.GetSelectedEngineAttribute("name") == item)
+                {
+                    searchEngineCombo.SelectedItem = comboBoxItem;
+                }
 
             }
 
+        }
+
+        private void searchEngineCombo_DropDownClosed(object sender, object e)
+        {
+            DataTransfer dt = new DataTransfer();
+            var selectedItem = searchEngineCombo.SelectedItem as ComboBoxItem;
+            dt.SetSearchEngine(selectedItem.Content.ToString());
         }
     }
 }

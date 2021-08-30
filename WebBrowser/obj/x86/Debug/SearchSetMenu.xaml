@@ -14,7 +14,7 @@
         <ComboBox x:ConnectionId='2' Margin="10"
                   Padding="20,0"
                   Header="Choose Default Search Engine"
-                  x:Name="searchEngineCombo"></ComboBox>
+                  x:Name="searchEngineCombo"                                                  ></ComboBox>
     </Grid>
 </Page>
 
