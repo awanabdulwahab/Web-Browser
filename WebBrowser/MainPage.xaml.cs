@@ -26,6 +26,7 @@ namespace WebBrowser
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public string EngineProfile = string.Empty;
         int settingsTabCount = 0;
         muxc.TabViewItem currentSelectedTab = null;
         WebView currentSelectedWebView = null;
@@ -70,11 +71,11 @@ namespace WebBrowser
             {
                 if (currentSelectedWebView == null)
                 {
-                    webBrowser.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
+                    webBrowser.Source = new Uri(EngineProfile + txt_searchBar.Text);
                 }
                 else
                 {
-                    currentSelectedWebView.Source = new Uri("https://www.google.com/search?q=" + txt_searchBar.Text);
+                    currentSelectedWebView.Source = new Uri(EngineProfile + txt_searchBar.Text);
 
                 } 
             }
@@ -255,6 +256,24 @@ namespace WebBrowser
 
 
 
+        }
+
+        private async void MainBrowserWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DataTransfer dt = new DataTransfer();
+                EngineProfile = await dt.GetSelectedEngineAttribute("prefix");
+
+                string searchEngineName = await dt.GetSelectedEngineAttribute("name");
+
+                txt_searchBar.PlaceholderText = "Search with " + searchEngineName + "........";
+            }
+            catch 
+            {
+
+                
+            }
         }
     }
 }

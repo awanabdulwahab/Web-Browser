@@ -11,6 +11,7 @@ namespace WebBrowser
     class DataTransfer
     {
         public string fileName = "settings.xml";
+        
 
         /// <summary>
         /// 

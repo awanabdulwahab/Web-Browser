@@ -9,7 +9,8 @@
     mc:Ignorable="d"
     Background="{StaticResource wbBackgroundColor}"
     
-    x:Name="MainBrowserWindow" Loading="MainBrowserWindow_Loading">
+    x:Name="MainBrowserWindow" Loading="MainBrowserWindow_Loading"
+    Loaded="MainBrowserWindow_Loaded">
         <!--Base Grid-->
     <Grid x:Name="BaseGrid">
         <Grid.RowDefinitions>
