@@ -102,7 +102,11 @@ namespace WebBrowser
             return list;
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="AttributeSource"></param>
+        /// <returns></returns>
         public async Task<List<string>> SearchEngineList(string AttributeSource)
         {
             List<string> list = new List<string>();
@@ -126,6 +130,10 @@ namespace WebBrowser
             });
             return list;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="EngineName"></param>
 
         public async void SetSearchEngine(string EngineName)
         {
@@ -152,7 +160,11 @@ namespace WebBrowser
 
             SaveDocument(doc);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="AttributeName"></param>
+        /// <returns></returns>
         public async Task<string> GetSelectedEngineAttribute(string AttributeName)
         {
             string value = string.Empty;
@@ -181,7 +193,11 @@ namespace WebBrowser
 
             return value;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="searchString"></param>
+        /// <returns></returns>
         public async Task<bool> HasSearchType(string searchString)
         {
             bool result = false;
@@ -205,6 +221,40 @@ namespace WebBrowser
                     } 
                 }
             });
+            return result;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="url"></param>
+        public async void SetHomePage(string name, string url)
+        {
+            var doc = await DocumentLoad();
+
+            var home = doc.GetElementsByTagName("home");
+
+            home[0].Attributes.GetNamedItem("name").InnerText = name;
+            home[0].Attributes.GetNamedItem("url").InnerText = url;
+
+            SaveDocument(doc);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Source"></param>
+        /// <returns></returns>
+        public async Task<string> GetHomeAttribute(string Source)
+        {
+            string result = "";
+
+            await Task.Run(async () =>
+            {
+                var doc = await DocumentLoad();
+                var home = doc.GetElementsByTagName("home");
+                result = home[0].Attributes.GetNamedItem(Source).InnerText;
+            });
+
             return result;
         }
     }

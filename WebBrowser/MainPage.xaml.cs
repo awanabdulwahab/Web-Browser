@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,6 +29,8 @@ namespace WebBrowser
     {
         public string EngineProfile = string.Empty;
         int settingsTabCount = 0;
+        string homeUrl, homeName = string.Empty;
+        
         muxc.TabViewItem currentSelectedTab = null;
         WebView currentSelectedWebView = null;
 
@@ -36,6 +39,8 @@ namespace WebBrowser
             this.InitializeComponent();
             DataAccess data = new DataAccess();
             data.CreateSettingsFile();
+
+            GetHome();
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -123,7 +128,7 @@ namespace WebBrowser
 
         private void homeBtn_Click(object sender, RoutedEventArgs e)
         {
-            webBrowser.Refresh();
+            NavigateHome();
         }
 
         private void settingBtn_Click(object sender, RoutedEventArgs e)
@@ -237,10 +242,10 @@ namespace WebBrowser
             {
                 Symbol = Symbol.Document
             };
-            newTab.Header = "Blank Page";
+            newTab.Header = homeName;
             WebView wbView = new WebView();
             newTab.Content = wbView;
-            wbView.Navigate(new Uri("https://www.google.com"));
+            wbView.Navigate(new Uri(homeUrl));
 
             sender.TabItems.Add(newTab);
 
@@ -349,6 +354,34 @@ namespace WebBrowser
 
                 
             }
+        }
+
+        private async void GetHome()
+        {
+            try
+            {
+                DataTransfer dt = new DataTransfer();
+
+                homeName = await dt.GetHomeAttribute("name");
+                homeUrl = await dt.GetHomeAttribute("url");
+            }
+            catch (Exception ex)
+            {
+
+                //MessageDialog msg = new MessageDialog(ex.Message);
+                //await msg.ShowAsync();
+            }
+
+            if (!string.IsNullOrEmpty(homeUrl) || !string.IsNullOrEmpty(homeName) )
+            {
+                NavigateHome(); 
+            }
+        }
+
+        private void NavigateHome()
+        {
+            currentSelectedWebView.Navigate(new Uri(homeUrl));
+            currentSelectedTab.Header = currentSelectedWebView.DocumentTitle;
         }
     }
 }
