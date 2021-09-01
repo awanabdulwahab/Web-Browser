@@ -66,20 +66,57 @@ namespace WebBrowser
 
         private async void Search()
         {
+            // Get an instance of the Data Transfer class.
             DataTransfer dt = new DataTransfer();
-            EngineProfile = await dt.GetSelectedEngineAttribute("prefix");
-            if (currentSelectedTab.Name != "settingsTab")
+
+            // Returns a true or false if the url bar has a host type (set in the xml settings file).
+            bool hasUrlType = await dt.HasSearchType(txt_searchBar.Text);
+
+            // If there is a type the navigate the current selected web view to the destination and adds https to the beginning.
+            if (hasUrlType)
             {
-                if (currentSelectedWebView == null)
+                // If the url doesn't contain http or https the add it to the beginning.
+                if (!txt_searchBar.Text.Contains("http://") || !txt_searchBar.Text.Contains("https://"))
                 {
-                    webBrowser.Source = new Uri(EngineProfile + txt_searchBar.Text);
+                    currentSelectedWebView.Navigate(new Uri("https://www." + txt_searchBar.Text));
                 }
                 else
                 {
-                    currentSelectedWebView.Source = new Uri(EngineProfile + txt_searchBar.Text);
+                    txt_searchBar.Text = "https://www." + txt_searchBar.Text;
+                }
 
-                } 
+                // Change the search text to the url.
+                txt_searchBar.Text = currentSelectedWebView.Source.AbsoluteUri;
             }
+            else
+            {
+                // Set the global veriable "prefix" to the selected engine.
+                EngineProfile = await dt.GetSelectedEngineAttribute("prefix");
+
+                if (currentSelectedTab != null)
+                {
+                    // add the prefix if it's not a settings page.
+                    if (currentSelectedTab.Name != "settingsTab")
+                    {
+                        if (currentSelectedWebView == null) // Posible error if no tab, could cause crash. <<Fix Needed>>
+                        {
+                            // search with the prefix of the selected search engine on the default.
+                            webBrowser.Source = new Uri(EngineProfile + txt_searchBar.Text);
+                        }
+                        else
+                        {
+                            // search with the prefix of the selected search engine on the current
+                            currentSelectedWebView.Source = new Uri(EngineProfile + txt_searchBar.Text);
+                        }
+                    }
+                }
+                else
+                {
+
+                }
+            }
+
+
         }
 
 
@@ -126,7 +163,7 @@ namespace WebBrowser
 
         private void webBrowser_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
         {
-           
+            brwoserRing.IsActive = true;
         }
 
         private void webBrowser_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
@@ -214,9 +251,26 @@ namespace WebBrowser
 
         private void BrowserNavigated(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
+            brwoserRing.IsActive = false;
             var view = sender as WebView;
             var tab = view.Parent as muxc.TabViewItem;
 
+            if (view != null) // Part 26 Changed
+            {
+                tab.Header = view.DocumentTitle;
+            }
+
+            if (!statusBar.Text.Contains("BlankPage"))
+            {
+                statusBar.Text = currentSelectedWebView.Source.AbsoluteUri; // Error
+            }
+            else
+            {
+                statusBar.Text = "Blank Page";
+            }
+
+            //tab.IconSource = new muxc.BitmapIconSource() { UriSource = new Uri(view.Source.Host + "favicon.ico") };
+            checkSSL();
             tab.Header = view.DocumentTitle;
         }
 
@@ -231,12 +285,31 @@ namespace WebBrowser
             }
         }
 
-        private void searchBtn_Click(object sender, RoutedEventArgs e)
+        private async void searchBtn_Click(object sender, RoutedEventArgs e)
         {
+            DataTransfer dt = new DataTransfer();
+
             //search
             if (string.IsNullOrEmpty(txt_searchBar.Text))
             {
-                Search(); 
+                bool hasUrlType = await dt.HasSearchType(txt_searchBar.Text);
+                if (hasUrlType)
+                {
+                    if (!txt_searchBar.Text.Contains("https://") || !txt_searchBar.Text.Contains("http://"))
+                    {
+                        currentSelectedWebView.Navigate(new Uri("https://www." +txt_searchBar.Text));
+                    }
+                    else
+                    {
+                        txt_searchBar.Text = "https://www." + txt_searchBar.Text;
+                    }
+                }
+                else
+                {
+                    Search();
+
+                }
+
             }
         }
 

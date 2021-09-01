@@ -181,5 +181,31 @@ namespace WebBrowser
 
             return value;
         }
+
+        public async Task<bool> HasSearchType(string searchString)
+        {
+            bool result = false;
+
+            await Task.Run(async () =>
+            {
+                var doc = await DocumentLoad();
+
+                var types =  doc.GetElementsByTagName("types");
+
+                var typesChild = types[0].ChildNodes;
+
+            for (int i = 0; i < typesChild.Count; i++)
+            {
+                    if (typesChild[i].NodeName == "type")
+                    {
+                        if (searchString.Contains(typesChild[i].Attributes.GetNamedItem("name").InnerText))
+                        {
+                            result = true;
+                        }
+                    } 
+                }
+            });
+            return result;
+        }
     }
 }
