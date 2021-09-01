@@ -64,9 +64,10 @@ namespace WebBrowser
 
         //Custom Function
 
-        private void Search()
+        private async void Search()
         {
-
+            DataTransfer dt = new DataTransfer();
+            EngineProfile = await dt.GetSelectedEngineAttribute("prefix");
             if (currentSelectedTab.Name != "settingsTab")
             {
                 if (currentSelectedWebView == null)
@@ -268,6 +269,7 @@ namespace WebBrowser
                 string searchEngineName = await dt.GetSelectedEngineAttribute("name");
 
                 txt_searchBar.PlaceholderText = "Search with " + searchEngineName + "........";
+                webBrowser.Source = new Uri (searchEngineName);
             }
             catch 
             {
