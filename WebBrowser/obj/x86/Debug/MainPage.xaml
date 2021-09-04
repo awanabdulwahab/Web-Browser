@@ -34,14 +34,14 @@
             
             <!--Forward and Backward Button-->
             <StackPanel Orientation="Horizontal" Margin="10,0">
-                <Button x:ConnectionId='16' x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
+                <Button x:ConnectionId='17' x:Name="backBtn" Margin="0,0,10,0" Background="{x:Null}"
                                              
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72b;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
 
                 </Button>
 
-                <Button x:ConnectionId='17' x:Name="forwardBtn"  Background="{x:Null}"
+                <Button x:ConnectionId='18' x:Name="forwardBtn"  Background="{x:Null}"
                                                 
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72a;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
@@ -49,13 +49,13 @@
                 
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
-                <Button x:ConnectionId='14' x:Name="homeBtn"  Background="{x:Null}"
+                <Button x:ConnectionId='15' x:Name="homeBtn"  Background="{x:Null}"
                                              
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe80f;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
                 </Button>
                 <Rectangle Fill="{StaticResource wbLighterBlue}" Width="1" Margin="10,5"></Rectangle>
-                <Button x:ConnectionId='15' x:Name="refreshBtn"  Background="{x:Null}"
+                <Button x:ConnectionId='16' x:Name="refreshBtn"  Background="{x:Null}"
                                                 
                         BorderThickness="0">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe72c;" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
@@ -64,12 +64,12 @@
             </StackPanel>
             
             <!-- SSL CertIcon-->
-            <Button x:ConnectionId='9' x:Name="sslBtn" Grid.Column="1" Padding="0" Background="{x:Null}" BorderThickness="0">
-                <FontIcon x:ConnectionId='13' x:Name="sslIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xe72e;"  Foreground="{StaticResource wbDarkTextColor}"/>
+            <Button x:ConnectionId='10' x:Name="sslBtn" Grid.Column="1" Padding="0" Background="{x:Null}" BorderThickness="0">
+                <FontIcon x:ConnectionId='14' x:Name="sslIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xe72e;"  Foreground="{StaticResource wbDarkTextColor}"/>
             </Button>
 
             <!--Search Bar-->
-            <TextBox x:ConnectionId='10' x:Name="txt_searchBar" 
+            <TextBox x:ConnectionId='11' x:Name="txt_searchBar" 
                      Grid.Column="2"
                      TextWrapping="NoWrap"
                      PlaceholderText="Search...."
@@ -78,7 +78,7 @@
                      BorderThickness="0"                                ></TextBox>
             <!--Seacrh Button-->
 
-            <Button x:ConnectionId='11' x:Name="searchBtn" Grid.Column="3" Background="{x:Null}" BorderThickness="0"                        >
+            <Button x:ConnectionId='12' x:Name="searchBtn" Grid.Column="3" Background="{x:Null}" BorderThickness="0"                        >
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe721;" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{StaticResource wbForegroundColor}"></FontIcon>
             </Button>
             <!--Setting Flyout-->
@@ -89,7 +89,7 @@
                 <!--Settings button Flyout-->
                 <Button.Flyout>
                     <MenuFlyout>
-                        <MenuFlyoutItem x:ConnectionId='12' Text="Settings" x:Name="settingBtn"                         >
+                        <MenuFlyoutItem x:ConnectionId='13' Text="Settings" x:Name="settingBtn"                         >
                             <MenuFlyoutItem.Icon>
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xe713;"></FontIcon>
                             </MenuFlyoutItem.Icon>
@@ -115,17 +115,17 @@
                 </Grid>
             </muxc:TabView.TabStripFooter>
             <muxc:TabView.TabItems>
-                <muxc:TabViewItem Header="Blank Page">
+                <muxc:TabViewItem x:ConnectionId='8' Header="Blank Page" x:Name="default_tab">
                     <muxc:TabViewItem.IconSource>
                         <muxc:SymbolIconSource Symbol="Add"></muxc:SymbolIconSource>
                     </muxc:TabViewItem.IconSource>
                     <!--Web View-->
-                    <WebView x:ConnectionId='8' Grid.Row="3"
+                    <WebView x:ConnectionId='9' Grid.Row="3"
                              Source="http://www.google.co.uk"
                              Visibility="Visible"
                              x:Name="webBrowser" 
                                                                                  
-                                                                                 
+                                                                                                                                    
                  ></WebView>
                 </muxc:TabViewItem>
             </muxc:TabView.TabItems>

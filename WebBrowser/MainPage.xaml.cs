@@ -27,6 +27,7 @@ namespace WebBrowser
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        int count = 0;
         public string EngineProfile = string.Empty;
         int settingsTabCount = 0;
         string homeUrl, homeName = string.Empty;
@@ -192,6 +193,7 @@ namespace WebBrowser
             {
                 statusBar.Text = "Blank Page";
             }
+            default_tab.Header = webBrowser.DocumentTitle;
 
         }
 
@@ -237,21 +239,13 @@ namespace WebBrowser
 
         private void TabView_AddTabButtonClick(Microsoft.UI.Xaml.Controls.TabView sender, object args)
         {
-            var newTab = new muxc.TabViewItem();
-            newTab.IconSource = new muxc.SymbolIconSource()
-            {
-                Symbol = Symbol.Document
-            };
-            newTab.Header = homeName;
-            WebView wbView = new WebView();
-            newTab.Content = wbView;
-            wbView.Navigate(new Uri(homeUrl));
+            AddNewTab(new Uri(homeUrl));
+        }
 
-            sender.TabItems.Add(newTab);
-
-            sender.SelectedItem = newTab;
-
-            wbView.NavigationCompleted += BrowserNavigated;
+        private void NewWindowRequested(WebView sender, WebViewNewWindowRequestedEventArgs args)
+        {
+            AddNewTab(args.Uri);
+            args.Handled = true;
         }
 
         private void BrowserNavigated(WebView sender, WebViewNavigationCompletedEventArgs args)
@@ -274,7 +268,7 @@ namespace WebBrowser
                 statusBar.Text = "Blank Page";
             }
 
-            //tab.IconSource = new muxc.BitmapIconSource() { UriSource = new Uri(view.Source.Host + "favicon.ico") };
+           // tab.IconSource = new muxc.BitmapIconSource() { UriSource = new Uri(view.Source.Host + "favicon.ico") };
             checkSSL();
             tab.Header = view.DocumentTitle;
         }
@@ -378,10 +372,46 @@ namespace WebBrowser
             }
         }
 
+        private void webBrowser_NewWindowRequested(WebView sender, WebViewNewWindowRequestedEventArgs args)
+        {
+            
+            if (count == 0)
+            {
+                AddNewTab(args.Uri);
+                args.Handled = true;
+                count++;
+            }
+            
+        }
+
         private void NavigateHome()
         {
             currentSelectedWebView.Navigate(new Uri(homeUrl));
             currentSelectedTab.Header = currentSelectedWebView.DocumentTitle;
+        }
+
+        private void AddNewTab(Uri url)
+        {
+            var newTab = new muxc.TabViewItem();
+            newTab.IconSource = new muxc.SymbolIconSource()
+            {
+                Symbol = Symbol.Document
+            };
+            newTab.Header = "New Tab";
+            WebView wbView = new WebView();
+            wbView.IsRightTapEnabled = true;
+            newTab.Content = wbView;
+            wbView.Navigate(url);
+
+            TabControl.TabItems.Add(newTab);
+
+            TabControl.SelectedItem = newTab;
+
+            wbView.NavigationCompleted += BrowserNavigated;
+            wbView.NewWindowRequested += NewWindowRequested;
+
+            currentSelectedTab = newTab;
+            currentSelectedWebView = wbView;
         }
     }
 }

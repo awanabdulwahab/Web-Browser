@@ -159,6 +159,7 @@
       <RootProperty Name="Visibility" />
       <RootEvent Name="NavigationCompleted" />
       <RootEvent Name="NavigationStarting" />
+      <RootEvent Name="NewWindowRequested" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />

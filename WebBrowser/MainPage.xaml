@@ -115,7 +115,7 @@
                 </Grid>
             </muxc:TabView.TabStripFooter>
             <muxc:TabView.TabItems>
-                <muxc:TabViewItem Header="Blank Page">
+                <muxc:TabViewItem Header="Blank Page" x:Name="default_tab">
                     <muxc:TabViewItem.IconSource>
                         <muxc:SymbolIconSource Symbol="Add"></muxc:SymbolIconSource>
                     </muxc:TabViewItem.IconSource>
@@ -125,7 +125,7 @@
                              Visibility="Visible"
                              x:Name="webBrowser" 
                              NavigationCompleted="webBrowser_NavigationCompleted"
-                             NavigationStarting="webBrowser_NavigationStarting_1"
+                             NavigationStarting="webBrowser_NavigationStarting_1" NewWindowRequested="webBrowser_NewWindowRequested"
                  ></WebView>
                 </muxc:TabViewItem>
             </muxc:TabView.TabItems>
